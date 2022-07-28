@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="$(SolutionDir)\ProjectEuler\ProblemData\**" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
 </Project>

@@ -27,7 +27,7 @@ public class Problem21 : Problem
         return amicableNumbers.Sum();
     }
 
-    private int SumOfDivisors(int number)
+    private static int SumOfDivisors(int number)
     {
         var total = 1;
 

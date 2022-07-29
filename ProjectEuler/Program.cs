@@ -3,6 +3,9 @@ using ProjectEuler;
 
 public class Program
 {
+    // Skipped problems so far:
+    // 15 - Couldn't optimise enough
+
     public static void Main()
     {
         var problems = GetProblems().OrderBy(x => x.Number);
@@ -70,7 +73,7 @@ public class Program
     private static IEnumerable<Problem> GetProblems()
     {
         var assembly = Assembly.GetAssembly(typeof(Program));
-        var problemTypes = assembly.GetTypes().Where(x => x.IsClass && x.IsSubclassOf(typeof(Problem)));
+        var problemTypes = assembly.GetTypes().Where(x => x.IsClass && !x.IsAbstract && x.IsSubclassOf(typeof(Problem)));
 
         var problems = new List<Problem>();
         foreach (var problemType in problemTypes)

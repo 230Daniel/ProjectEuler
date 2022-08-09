@@ -23,10 +23,10 @@ public class Problem10 : Problem
 
     private static bool IsPrime(int input, List<int> primesBelowInput)
     {
-        var minimumDivisor = (input / 2) + 1;
+        var maximumDivisor = (input / 2) + 1;
         foreach (var prime in primesBelowInput)
         {
-            if (prime > minimumDivisor) break;
+            if (prime > maximumDivisor) break;
             if (input % prime == 0) return false;
         }
 

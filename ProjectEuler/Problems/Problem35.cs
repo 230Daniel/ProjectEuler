@@ -80,12 +80,12 @@ public class Problem35 : Problem
     private static bool IsPrime(int input, List<int> primesBelowInput)
     {
         if (input < 2) return false;
-        var minimumDivisor = (input / 2) + 1;
+        var maximumDivisor = (input / 2) + 1;
 
         for (var i = 0; i < primesBelowInput.Count; i++)
         {
             var prime = primesBelowInput[i];
-            if (prime > minimumDivisor) break;
+            if (prime > maximumDivisor) break;
             if (input % prime == 0) return false;
         }
 
